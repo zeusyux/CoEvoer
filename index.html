@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="CoEvoer for Human Mesh Recovery">
+  <meta name="keywords" content="CoEvoer, Human Mesh Recovery, Pose Estimation, Human-Robot Interaction, Digital Human">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoEvoer for Human Mesh Recovery</title>
+
+  <style>
+    .hr {width: 100%; height: 1px; margin: 48px 0; background-color: #d6dbdf;}
+  </style>
+
+  <!-- 原字体 -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <!-- 花体字体（辨识度高） -->
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/twentytwenty.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop head">
+      <div class="columns is-centered">
+        <div class="column has-text-centered head">
+          <!-- 标题两行字体相同 & Transformer 连写，er标红 -->
+          <h1 class="title is-2 publication-title" style="font-family: 'Allura', cursive;"> 
+            <span style="color:#fb5a42">CoEvoer</span>: 
+            <span style="color:#fb5a42">Co</span>llaborative
+            <span style="color:#fb5a42">Evo</span>lution Transform<span style="color:#fb5a42">er</span> for Upper-Body
+          </h1>
+          <h1 class="title is-2" style="margin-top:8px; font-family: 'Allura', cursive;">
+            Expressive Human Pose and Shape Estimation
+          </h1>
+
+          <!-- 作者及单位 -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Yuxiang Zhao<sup>1,2</sup>,</span>
+            <span class="author-block">Wei Huang<sup>1<abbr title="Corresponding Author">†</abbr></sup>,</span>
+            <span class="author-block">Yujie Song<sup>1</sup>,</span>
+            <span class="author-block">Liu Wang<sup>1</sup>,</span>
+            <span class="author-block">Huan Zhao<sup>1</sup></span>
+          </div>
+
+          <!-- 单位信息 -->
+          <div class="is-size-6 publication-authors" style="margin-top:4px;">
+            <span class="author-block"><sup>1</sup> Sun Yat-sen University,&nbsp; <sup>2</sup> Alibaba Group</span>
+          </div>
+
+          <!-- 会议 -->
+          <div class="is-size-5 publication-authors" style="margin-top:4px;">
+            <span class="author-block">The 40th Annual AAAI Conference on Artificial Intelligence</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 视频展示第一排 -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <!-- 视频项示例 -->
+        <div class="item">
+          <div class="twentytwenty-container" ratio="0.5556">
+            <div class="desc">Object Removal</div>
+            <div class="video">
+              <video muted autoplay loop width="100%">
+                <source src="./assets/videos_reduced/object_removal_01_mask.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay loop width="100%">
+                <source src="./assets/videos_reduced/object_removal_01_out.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="content has-text-justified">
+          <ol type="a">
+            <br>
+            <li><b>Object Removal</b>: remove the object(s) from a video.</li>
+            <li><b>Video Completion</b>: complete the masked video.</li>
+            <li><b>Video Outpainting</b>: expand the view of a video.</li>
+          </ol>
+        </div>
+        <div class="hr"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Expressive Human Pose and Shape Estimation (EHPS) plays a crucial role in various AR/VR applications and has witnessed significant progress in recent years. However, current state-of-the-art methods still struggle with accurate parameter estimation for facial and hand regions and exhibit limited generalization to wild images. To address these challenges, we present CoEvoer, a novel one-stage synergistic cross-dependency transformer framework tailored for upper-body EHPS. CoEvoer enables explicit feature-level interaction across different body parts, allowing for mutual enhancement through contextual information exchange. Specifically, larger and more easily estimated regions such as the torso provide global semantics and positional priors to guide the estimation of finer, more complex regions like the face and hands. Conversely, the localized details captured in facial and hand regions help refine and calibrate adjacent body parts. To the best of our knowledge, CoEvoer is the first framework designed specifically for upper-body EHPS, with the goal of capturing the strong coupling and semantic dependencies among the face, hands, and torso through joint parameter regression. Extensive experiments demonstrate that CoEvoer achieves state-of-the-art performance on upper-body benchmarks and exhibits strong generalization capability even on unseen wild images.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@InProceedings{zhao2026coevoer,
+      title     = {CoEvoer: Collaborative Evolution Transformer for Upper-Body Expressive Human Pose and Shape Estimation},
+      author    = {Yuxiang Zhao, Wei Huang, Yujie Song, Liu Wang and Huan Zhao},
+      booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+      year      = {2026}
+    }</code></pre>
+  </div>
+</section>
+
+<!-- footer 完全移除 -->
+
+<script src="./assets/js/bulma-carousel.min.js"></script>
+<script src="./assets/js/bulma-slider.min.js"></script>
+<script src="./assets/js/index.js"></script>
+<script src="./assets/js/jquery.event.move.js"></script>
+<script src="./assets/js/jquery.twentytwenty.js"></script>
+<script>
+  $(function(){
+    $(".twentytwenty-container").twentytwenty();
+  });
+</script>
+
+</body>
+</html>
