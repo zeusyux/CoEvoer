@@ -1,18 +1,32 @@
-# CoEvoer
+# **AAAI'26: CoEvoer: Collaborative Evolution Transformer for Upper-Body Expressive Human Pose and Shape Estimation**
 
-This is the source code to the [CoEvoer website](https://shangchenzhou.com/projects/ProPainter).
-Feel free to clone this code for your own personal use.
+<p align="center">
+  <a href='https://arxiv.org/abs/2405.04533'>
+    <img src='https://img.shields.io/badge/Arxiv-2405.04533-A42C25?style=flat&logo=arXiv&logoColor=A42C25'>
+  </a>
+  <a href='https://arxiv.org/pdf/2405.04533'>
+    <img src='https://img.shields.io/badge/Paper-PDF-yellow?style=flat&logo=arXiv&logoColor=yellow'>
+  </a>
+  <a href='https://chathuman.github.io'>
+  <img src='https://img.shields.io/badge/Project-Page-pink?style=flat&logo=Google%20chrome&logoColor=pink'>
+  </a>
+  <a href='https://youtu.be/0a0ZYJgzdWE'>
+  <img src='https://img.shields.io/badge/YouTube-Video-EA3323?style=flat&logo=youtube&logoColor=EA3323'>
+  </a>
+  <a href='https://github.com/linjing7/ChatHuman'>
+    <img src='https://img.shields.io/badge/GitHub-Code-black?style=flat&logo=github&logoColor=white'>
+  </a>
+  <a href="" target='_blank'>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=linjing7.ChatHuman&left_color=gray&right_color=orange">
+  </a>
+</p>
 
+This repository contains the implementation of the following paper:
 
-If you find CoEvoer useful for your work please [star](https://github.com/zeusyux/CoEvoer) and cite:
-```
-@InProceedings{zhou2023propainter,
-      title     = {{ProPainter}: Improving Propagation and Transformer for Video Inpainting},
-      author    = {Zhou, Shangchen and Li, Chongyi and Chan, Kelvin C.K and Loy, Chen Change},
-      booktitle = {Proceedings of IEEE International Conference on Computer Vision (ICCV)},
-      year      = {2023}
-}
-```
+> ChatHuman: Language-driven 3D Human Understanding with Retrieval-Augmented Tool Reasoning
+> 
+> [Jing Lin](https://jinglin7.github.io/)<sup>3,4,\*</sup>, [Yao Feng](https://scholar.google.com/citations?user=wNQQhSIAAAAJ&hl=en)<sup>2,3,\*</sup>, [Weiyang Liu](https://wyliu.com/)<sup>1,5</sup>,[Michael J. Black](https://ps.is.mpg.de/person/black)<sup>1</sup>
+>
+> <sup>1</sup>Max Planck Institute for Intelligent Systems, <sup>2</sup>Standford University, <sup>3</sup>Meshcapade, <sup>4</sup>Tsinghua University, <sup>5</sup>University of Cambridge, <sup>*</sup>Equal Contribution
 
-# Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+![teaser](images/teaser.jpeg)
