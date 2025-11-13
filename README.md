@@ -18,7 +18,7 @@
   </a>
 </p>
 
-This repository contains the implementation of the following paper:
+Official implementation of the following paper:
 
 > CoEvoer: Collaborative Evolution Transformer for Upper-Body Expressive Human Pose and Shape Estimation
 > 
