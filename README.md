@@ -20,9 +20,8 @@
 
 Official implementation of the following paper:
 
-> CoEvoer: Collaborative Evolution Transformer for Upper-Body Expressive Human Pose and Shape Estimation
-> 
-> Yuxiang Zhao<sup>1,2</sup>, Wei Huang<sup>1†</sup>, Yujie Song<sup>1</sup>, Liu Wang<sup>1</sup>, Huan Zhao<sup>1</sup>
+> CoEvoer: Collaborative Evolution Transformer for Upper-Body Expressive Human Pose and Shape Estimation<br>
+> Yuxiang Zhao<sup>1,2</sup>, Wei Huang<sup>1†</sup>, Yujie Song<sup>1</sup>, Liu Wang<sup>1</sup>, Huan Zhao<sup>1</sup><br>
 > <sup>1</sup>Sun Yat-sen University, <sup>2</sup>Alibaba Group, <sup>†</sup>Corresponding author.
 
 ![teaser](assets/teaser/demo.png)
