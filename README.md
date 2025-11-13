@@ -1,4 +1,4 @@
-# **AAAI'26: CoEvoer: Collaborative Evolution Transformer for Upper-Body Expressive Human Pose and Shape Estimation**
+# **CoEvoer: Collaborative Evolution Transformer for Upper-Body Expressive Human Pose and Shape Estimation**
 
 <p align="center">
   <a href='https://arxiv.org/abs/2405.04533'>
