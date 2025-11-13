@@ -26,4 +26,4 @@ Official implementation of the following paper:
 >
 > <sup>1</sup>Sun Yat-sen University, <sup>2</sup>Alibaba Group, <sup>†</sup>Corresponding author.
 
-![teaser](images/teaser.jpeg)
+![teaser](assets/teaser/demo1.png)
